@@ -1,0 +1,12 @@
+Overall structure :
+
+User interacts with the application using the FXController.
+The FXController exposes createOrder and getOrder endpoints.
+Since we require 3 states we need to match the trades at run time. A trade is marked as PARTIAL if there is a trade that it can fit in.
+
+
+DB:
+I have created 2 tables to hold data.
+1. Trade table has all buys and sell trades.
+2. Linking of a buy to a sell is done via the AuthTrade table. It holds a many to many relation ship which maps the seller and buyer.
+
